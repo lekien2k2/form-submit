@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="header">
+      <span class="header-main">DỮ LIỆU HỒ SƠ ĐẢNG VIÊN</span>
+      <span class="header-sub">Kiểm tra hồ sơ và đánh vào danh mục theo biểu mẫu</span>
+    </div>
+
+    <div class="content">
+      <span>Chi bộ</span>
+      <select name="chibo" id="chibo">
+        <option value=""></option>
+        <option value="1">Chi bộ 1</option>
+        <option value="2">Chi bộ 2</option>
+        <option value="3">Chi bộ 3</option>
+        <option value="4">Chi bộ 4</option>
+        <option value="5">Chi bộ 5</option>
+        <option value="6">Chi bộ 6</option>
+        <option value="7">Chi bộ 7</option>
+        <option value="8">Chi bộ 8</option>
+        <option value="9">Chi bộ 9</option>
+        <option value="10">Chi bộ 10</option>
+        <option value="11">Chi bộ 11</option>
+        <option value="12">Chi bộ 12</option>
+        <option value="13">Chi bộ 13</option>
+        <option value="14">Chi bộ 14</option>
+        <option value="15">Chi bộ 15</option>
+        <option value="16">Chi bộ 16</option>
+        <option value="18">Chi bộ 18</option>
+        <option value="20">Chi bộ 20</option>
+        <option value="23">Chi bộ 23</option>
+        <option value="24">Chi bộ 24</option>
+        <option value="26">Chi bộ 26</option>
+        <option value="27">Chi bộ 27</option>
+        <option value="28">Chi bộ 28</option>
+        <option value="29">Chi bộ 29</option>
+        <option value="sv1">Chi bộ Sinh Viên 1</option>
+        <option value="sv2">Chi bộ Sinh Viên 2</option>
+        <option value="sv3">Chi bộ Sinh Viên 3</option>
+        <option value="sv4">Chi bộ Sinh Viên 4</option>
+        <option value="sv5">Chi bộ Sinh Viên 5</option>
+        <option value="sv6">Chi bộ Sinh Viên 6</option>
+        <option value="sv7">Chi bộ Sinh Viên 7</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <span>Đối tượng</span>
+      <select name="Object" id="Objectr">
+        <option value="đvcbvc">Đảng viên là CBVC</option>
+        <option value="đvsv">Đảng viên là Sinh viên</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <span>MSSV/CBVC</span>
+      <input type="text" id="maso" />
+    </div>
+
+    <div class="content">
+      <span>Họ và Tên</span>
+      <input type="text" id="name" />
+    </div>
+
+    <div class="content">
+      <span>Số điện thoại</span>
+      <input type="text" id="sdt" />
+    </div>
+    <div class="content">
+      <span>Email</span>
+      <input type="email" id="email" />
+    </div>
+    <div class="content">
+      <span>Đơn vị</span>
+      <select name="unit" id="unit">
+        <option value="Đ-ĐT">Khoa Điện - Điện tử</option>
+        <option value="P-TCHC">Phòng Tổ chức - Hành chính</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <span>Ngày sinh</span>
+      <input type="date" id="birthday" />
+    </div>
+
+    <div class="content">
+      <span>Giới tính</span>
+      <select name="gender" id="gender">
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <span>Dân tộc</span>
+      <select name="dantoc" id="dantoc">
+        <option value="Kinh">Kinh</option>
+        <option value="Tày">Tày</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <span>Tôn giáo</span>
+      <select name="tongiao" id="tongiao">
+        <option value="Phật giáo">Phật giáo</option>
+        <option value="Thiên chúa giáo">Thiên chúa giáo</option>
+      </select>
+    </div>
+
+
+
+    <div class="content" id="quequan">
+      <span>Quê quán</span>
+      <div>
+        <input type="text" id="tinh" placeholder="Chọn tỉnh" />
+        <ul id="list_tinh" style="display: none"></ul>
+      </div>
+      <div>
+        <input type="text" id="huyen" placeholder="Chọn huyện" />
+        <ul id="list_huyen" style="display: none"></ul>
+      </div>
+      <div>
+        <input type="text" id="xa" placeholder="Chọn xã" />
+        <ul id="list_xa" style="display: none"></ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <span>Ngày vào Đảng</span>
+      <input type="date" id="ngayvaodang" />
+    </div>
+
+    <div class="content">
+      <span>Nơi kết nạp Đảng</span>
+      <input type="text" id="noiketnap" />
+    </div>
+
+    <div class="content">
+      <span>Ngày chính thức</span>
+      <input type="date" id="ngaychinhthuc" />
+    </div>
+
+    <div class="content">
+      <span>Nơi chuyển chính thức</span>
+      <input type="text" id="noichinhthuc" />
+    </div>
+
+    <div class="content">
+      <span>Số lý lịch</span>
+      <input type="text" id="solylich" />
+    </div>
+
+    <div class="content">
+      <span>Số thẻ Đảng</span>
+      <input type="text" id="sothedang" />
+    </div>
+
+    <div class="content">
+      <span>Học vấn</span>
+      <input type="text" id="education" />
+    </div>
+
+    <div class="content">
+      <span>Học vị</span>
+      <input type="text" id="degree" />
+    </div>
+
+    <div class="content">
+      <span>Học hàm</span>
+      <input type="text" id="academic" />
+    </div>
+
+    <div class="content">
+      <span>Lí luận chính trị</span>
+      <input type="text" id="liluanchinhtri" />
+    </div>
+    <div class="content">
+      <span>Nghề nghiệp</span>
+      <input type="text" id="job" />
+    </div>
+    <div class="content">
+      <span>Chức vụ Đảng-Đoàn thể</span>
+      <input type="text" id="chucvudoanthe" />
+    </div>
+    <div class="content">
+      <span>Chức vụ chính quyền</span>
+      <input type="text" id="chucvuchinhquyen" />
+    </div>
+
+
+
+
+    <h1 style="color:#357abd">I. PHẦN KIỂM TRA DANH MỤC KẾT NẠP ĐẢNG</h1>
+    <div class="content">
+      <span>Giấy chứng nhận học lớp bồi dưỡng nhận thức về Đảng</span>
+      <label> <input type="radio" name="ketnap1" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap1" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Đơn xin vào Đảng</span>
+      <label> <input type="radio" name="ketnap2" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap2" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Lý lịch của người xin vào Đảng</span>
+      <label> <input type="radio" name="ketnap3" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap3" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Giấy giới thiệu người vào Đảng</span>
+      <label> <input type="radio" name="ketnap4" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap4" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết giới thiệu đoàn viên ưu tú vào Đảng</span>
+      <label> <input type="radio" name="ketnap5" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap5" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết giới thiệu đoàn viên công đoàn vào Đảng</span>
+      <label> <input type="radio" name="ketnap6" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap6" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Tổng hợp ý kiến nhận xét của tố chức đoàn thể CT-XH nơi sinh hoạt
+        và chi ủy nơi cư trú đối với người vào Đảng
+      </span>
+      <label> <input type="radio" name="ketnap7" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap7" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết dề nghị kết nạp đảng viên(của chi bộ)</span>
+      <label> <input type="radio" name="ketnap8" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap8" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Báo cáo đề nghị kết nạp đảng viên (của đảng ủy bộ phận)</span>
+      <label> <input type="radio" name="ketnap9" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap9" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết đề nghị kết nạp đảng viên (của đảng ủy, chi ủy cơ sở)</span>
+      <label> <input type="radio" name="ketnap10" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap10" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Quyết định kết nạp đảng viên (của cấp ủy có thẩm quyền)</span>
+      <label> <input type="radio" name="ketnap11" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap11" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Lí lịch đảng viên</span>
+      <label> <input type="radio" name="ketnap12" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="ketnap12" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content" style="flex-direction: column">
+      <span style="width: 100%">
+        <span>Số quyết định kết nạp Đảng</span>
+        <span> <i>Số được định dạng: Số....-QĐ/ĐU ngày ... tháng.... năm </i></span>
+      </span>
+      <input type="text" id="ketnap13" />
+    </div>
+    <h1 style="color: #357abd;">II. PHẦN KIỂM TRA DANH MỤC CHUYỂN ĐẢNG CHÍNH THỨC</h1>
+    <div class="content">
+      <span>Giấy chứng nhận học lớp đảng viên mới</span>
+      <label> <input type="radio" name="chinhthuc1" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc1" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Bản tự kiểm điểm đề nghị công nhận đảng viên chính thức (của đảng viên dự bị)</span>
+      <label> <input type="radio" name="chinhthuc2" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc2" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Bản nhận xét đảng viên dự bị(của đảng viên được phân công giúp đỡ)</span>
+      <label> <input type="radio" name="chinhthuc3" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc3" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Tổng hợp ý kiến nhận xét của tổ chức đoàn thể CT-XH nơi sinh hoạt và chi ủy
+        nơi cư trú đối với đảng viên dự bị
+      </span>
+      <label> <input type="radio" name="chinhthuc4" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc4" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết đề nghị công nhận đảng viên chính thức (của chi bộ) </span>
+      <label> <input type="radio" name="chinhthuc5" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc5" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Báo cáo đề nghị công nhận chính thức (của đảng ủy bộ phận)</span>
+      <label> <input type="radio" name="chinhthuc6" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc6" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Nghị quyết đề nghị công nhận đảng viên chính thức(của đảng ủy, chi ủy cơ sở)</span>
+      <label> <input type="radio" name="chinhthuc7" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc7" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Quyết định công nhận đảng viên chính thức (của cấp ủy có thẩm quyền)</span>
+      <label> <input type="radio" name="chinhthuc8" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc8" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Quyết định phát thẻ đảng viên</span>
+      <label> <input type="radio" name="chinhthuc9" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc9" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Quyết định cấp lại thẻ đảng viên bị mất</span>
+      <label> <input type="radio" name="chinhthuc10" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc10" value="khong" /> Không
+      </label>
+    </div>
+    <div class="content">
+      <span>Quyết định đổi lại thẻ đảng viên bị hỏng</span>
+      <label> <input type="radio" name="chinhthuc11" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="chinhthuc11" value="khong" /> Không
+      </label>
+    </div>
+
+    <div class="content" style="flex-direction: column">
+    
+        <span>Số quyết định công nhận chính thức</span>
+        <span> <i>Số được định dạng: Số....-QĐ/ĐU ngày...tháng....năm </i></span>
+      <input type="text" id="chinhthuc12" />
+    </div>
+
+    <h1 style="color: #357abd;">III. CÁC TÀI LIỆU LIÊN QUAN</h1>
+    <div class="content">
+      <span>Các bản bổ sung hồ sơ đảng viên hàng năm và khi chuyển sinh hoạt đảng</span>
+      <label> <input type="radio" name="tailieukhac1" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="tailieukhac1" value="khong" /> Không
+      </label>
+    </div>
+
+    <div class="content">
+      <span>Các bản tự kiểm của đảng viên hàng năm và khi chuyển sinh hoạt đảng</span>
+      <label> <input type="radio" name="tailieukhac2" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="tailieukhac2" value="khong" /> Không
+      </label>
+    </div>
+
+    <div class="content">
+      <span>Các quyết định của cấp có thẩm quyền(Đảng, chính quyền, đoàn thể) về điều động,
+        đề bạt, nghỉ hưu, khen thưởng, kỷ luật,...
+      </span>
+      <label> <input type="radio" name="tailieukhac3" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="tailieukhac3" value="khong" /> Không
+      </label>
+    </div>
+
+    <div class="content">
+      <span>Hệ thống giấy giới thiệu sinh hoạt đảng từ khi vào Đảng đến nay
+      </span>
+      <label> <input type="radio" name="tailieukhac4" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="tailieukhac4" value="khong" /> Không
+      </label>
+    </div>
+
+    <div class="content">
+      <span>Các tài liệu khác (nếu có)
+      </span>
+      <label> <input type="radio" name="tailieukhac5" value="co" /> Có </label>
+      <label>
+        <input type="radio" name="tailieukhac5" value="khong" /> Không
+      </label>
+    </div>
+
+
+    <div class="footer">
+      <button id="submit">Submit</button>
+    </div>
+
+
+  </section>
+</body>
+<script src="control.js"></script>
+
+</html>
