@@ -153,3 +153,35 @@ fetch(provinceUrl)
     });
   })
   .catch((error) => console.error("Lỗi khi lấy danh sách tỉnh:", error));
+
+
+
+// now when i click submid button, i want to get all the value of input and select tag
+document.addEventListener("DOMContentLoaded", function () {
+  // Lắng nghe sự kiện click vào nút Submit
+  document.getElementById("submit").addEventListener("click", function () {
+    // Gọi hàm để đọc dữ liệu và chuyển đổi thành JSON
+    submitForm();
+  });
+});
+
+function submitForm() {
+  // Khởi tạo đối tượng JSON để lưu trữ dữ liệu
+  var formData = {};
+
+  // Lặp qua tất cả các thẻ input và select
+  var inputs = document.querySelectorAll("input, select");
+  inputs.forEach(function (input) {
+    // Kiểm tra nếu là input hoặc select có giá trị
+    if (input.value.trim() !== "") {
+      // Lưu trữ giá trị vào đối tượng JSON
+      formData[input.id] = input.value;
+    }
+  });
+
+  // Chuyển đổi đối tượng JSON thành chuỗi JSON
+  var jsonData = JSON.stringify(formData);
+
+  // Hiển thị chuỗi JSON trong console (có thể gửi dữ liệu đến máy chủ ở đây)
+  console.log(jsonData);
+}
